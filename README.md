@@ -1,6 +1,6 @@
 # 4 libs to use with node-js
 
-This code was created based on [this](https://www.youtube.com/watch?v=mxiRCcnsKDw) [Rocketseat](https://www.rocketseat.com.br/) tutorial.
+## This code was created based on [this](https://www.youtube.com/watch?v=mxiRCcnsKDw) tutorial from [Rocketseat](https://www.rocketseat.com.br/)
 
 - Init a node project.
 
@@ -22,16 +22,11 @@ npx tsc --init
 
 - Change "target" inside tsconfig.json to "es2020".
 
-``` json
-{
-  /* Language and Environment */
-  "target": "es2020" 
-},
-```
+> "target": "es2020"
 
 - Create "src/server.ts" and add a "dummy" interface just for tests.
 
-- Install tsx (1st) as dev dependency. This lib use as base the esbuild and is ~used to execute typescript code~.
+- Install tsx (1st) as dev dependency. This lib use as base the esbuild and is **used to execute typescript code**.
 
 ``` shell
 npm install tsx -D
@@ -39,14 +34,12 @@ npm install tsx -D
 
 - Change "scripts" in package.json to use tsx
 
-``` json
-  "scripts": {
-    "start": "tsx src/server.ts",
-    "start:dev": "tsx watch src/server.ts"
-  },
-```
+<blockquote style="font-family: monospace">
+"start": "tsx src/server.ts" <br>
+"start:dev": "tsx watch src/server.ts"
+</blockquote>
 
-- Install tsup (2nd) as dev dependency. This lib use as base the esbuild too and is ~used in the build process of the application~, this is important because in production you want to execute node and not tsx, and node only supports javascript code.
+- Install tsup (2nd) as dev dependency. This lib use as base the esbuild too and is **used in the build process of the application**, this is important because in production you want to execute node and not tsx, and node only supports javascript code.
 
 ``` shell
 npm install tsup -D
@@ -54,13 +47,9 @@ npm install tsup -D
 
 - Change "scripts" in package.json to use tsup
 
-``` json
-  "scripts": {
-    "build": "tsup src"
-  },
-```
+> "build": "tsup src"
 
-- Install vitest (3rd) as dev dependency. This lib use as base the esbuild too and is ~used to perform tests in the application~.
+- Install vitest (3rd) as dev dependency. This lib use as base the esbuild too and is **used to perform tests in the application**.
 
 ``` shell
 npm install vitest -D
@@ -68,13 +57,9 @@ npm install vitest -D
 
 - Change "scripts" in package.json to use vitest
 
-``` json
-  "scripts": {
-    "test": "vitest"
-  },
-```
+> "test": "vitest"
 
-- Install zod (4th). This is ~used to help in runtime validations~.
+- Install zod (4th). This is **used to help in runtime validations**.
 
 ``` shell
 npm install zod
